@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Happy Birthday My Love 💕"/>
+  <title>Happy Birthday My Love 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- LOADING -->
+<div id="loading">
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;width:80px;height:80px;margin-bottom:10px">
+    <div class="ld-ring"></div>
+    <div class="ld-heart">💖</div>
+  </div>
+  <div class="ld-text">Preparing something magical for you…</div>
+  <div class="ld-bar-wrap"><div class="ld-bar"></div></div>
+  <div class="ld-dots" style="margin-top:20px">
+    <div class="ld-dot"></div><div class="ld-dot"></div><div class="ld-dot"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" onclick="if(event.target===this)closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <div id="lb-inner"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="goTo('hero')">💕 My Love</div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <button class="nav-link active" onclick="goTo('hero')">Home</button>
+      <button class="nav-link" onclick="goTo('wishes')">Wishes</button>
+      <button class="nav-link" onclick="goTo('gallery')">Gallery</button>
+      <button class="nav-link" onclick="goTo('videos')">Videos</button>
+      <button class="nav-link" onclick="goTo('letter')">Letter</button>
+      <button class="nav-link" onclick="goTo('surprise')">Surprise 🎁</button>
+    </div>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()">♪&nbsp; Music</button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="orb" style="width:450px;height:450px;background:rgba(255,182,193,.07);top:-130px;left:-130px;animation-duration:6s"></div>
+  <div class="orb" style="width:350px;height:350px;background:rgba(75,46,131,.15);bottom:-90px;right:-90px;animation-duration:8s;animation-delay:2s"></div>
+  <div class="orb" style="width:220px;height:220px;background:rgba(255,182,193,.05);top:40%;left:65%;animation-duration:5s;animation-delay:1s"></div>
+  <div class="stars-layer" id="hero-stars"></div>
+  <div id="particles"></div>
+  <div id="hearts-bg"></div>
+
+  <h1 class="hero-title">Happy Birthday<br>My Love ❤️</h1>
+  <p class="hero-sub">Today the whole universe celebrates you, my darling</p>
+  <blockquote class="hero-quote">
+    "You are the poem I never knew how to write, the song I've always heard in my heart.
+    On your birthday, all I want to do is make you feel as loved as you make me feel every single day."
+  </blockquote>
+  <button class="hero-btn" onclick="goTo('wishes')">Enter the Surprise ✨</button>
+  <div class="scroll-hint">
+    <span class="scroll-arrow">↓</span>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ═══ WISHES ═══ -->
+<section id="wishes">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Heartfelt Wishes 💌</h2>
+    <div class="section-divider"></div>
+    <div class="wishes-grid">
+      <div class="wish-card glass reveal d1"><span class="wish-emoji">🌹</span><div class="wish-title">You're My Everything</div><div class="wish-text">On this special day, I want you to know that every morning I wake up grateful — grateful that the universe conspired to bring you into my life. You are my sunrise and my sunset, all at once.</div></div>
+      <div class="wish-card glass reveal d2"><span class="wish-emoji">🦋</span><div class="wish-title">You Are Beautiful</div><div class="wish-text">There is no one in this world who shines quite the way you do. Your eyes hold galaxies, your smile moves mountains, and your laugh is the most beautiful sound I have ever heard.</div></div>
+      <div class="wish-card glass reveal d3"><span class="wish-emoji">✨</span><div class="wish-title">My Favourite Dreamer</div><div class="wish-text">May this birthday bring you everything your heart desires. You deserve all the magic, wonder, and joy that life has to offer — and so much more than words could ever hold.</div></div>
+      <div class="wish-card glass reveal d1"><span class="wish-emoji">🌙</span><div class="wish-title">My Safe Place</div><div class="wish-text">You are home to me. Wherever you are, that's where I want to be. Thank you for being the warmth in my coldest moments and the light in my darkest hours.</div></div>
+      <div class="wish-card glass reveal d2"><span class="wish-emoji">💫</span><div class="wish-title">Here's to You</div><div class="wish-text">To another year of your radiant spirit, your contagious laughter, your incredible kindness. The world is genuinely better because you are in it, my love.</div></div>
+      <div class="wish-card glass reveal d3"><span class="wish-emoji">🎂</span><div class="wish-title">Make a Wish</div><div class="wish-text">Close your eyes, blow out those candles, and wish for every single thing you've ever wanted. Know that one of those wishes is already standing right beside you — me, loving you forever.</div></div>
+    </div>
+    <h3 class="tl-label reveal">Our Story 📖</h3>
+    <div class="section-divider" style="margin-bottom:44px"></div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Our Memories 📸</h2>
+    <div class="section-divider"></div>
+    <p class="section-hint reveal">Drop your photos in the <code>images/</code> folder · update filenames in <code>js/app.js</code> ❤️</p>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ VIDEOS ═══ -->
+<section id="videos">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Video Memories 🎬</h2>
+    <div class="section-divider"></div>
+    <p class="section-hint reveal">Drop your .mp4 files in the <code>videos/</code> folder · update filenames in <code>js/app.js</code> 🎥</p>
+    <div class="videos-grid" id="videos-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ LETTER ═══ -->
+<section id="letter">
+  <div class="section-inner">
+    <h2 class="section-title reveal">A Letter From My Heart 💌</h2>
+    <div class="section-divider"></div>
+    <div class="letter-wrap reveal">
+      <div class="letter-paper">
+        <div class="wax-seal">💕</div>
+        <div class="letter-greeting">My Dearest Love,</div>
+        <div class="letter-body" id="letter-body"></div>
+        <div class="hb-wrap">
+          <svg class="hb-svg" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+            <path class="hb-path" d="M0,30 L32,30 L42,10 L52,52 L62,30 L74,30 L84,5 L96,56 L106,30 L118,30 L128,18 L140,42 L150,30 L190,30 L220,30"/>
+          </svg>
+        </div>
+        <div class="letter-closing">With all my love, always 💕<small>— Yours, forever and always ✦</small></div>
+      </div>
+      <div id="petals-layer" style="position:absolute;inset:0;pointer-events:none;overflow:hidden"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SURPRISE ═══ -->
+<section id="surprise">
+  <div class="stars-layer" id="surprise-stars"></div>
+  <div class="orb" style="width:600px;height:600px;background:rgba(255,182,193,.05);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+  <div class="orb" style="width:260px;height:260px;background:rgba(75,46,131,.2);top:10%;right:10%;animation-duration:7s"></div>
+  <div class="surprise-inner">
+    <p class="surprise-pre reveal">✦ &nbsp; The Final Surprise &nbsp; ✦</p>
+    <span class="surprise-title reveal">🎂 Today Is Your Day!</span>
+    <div class="cd-grid reveal">
+      <div class="cd-box glass"><span class="cd-num" id="cd-d">00</span><div class="cd-label">Days</div></div>
+      <div class="cd-box glass"><span class="cd-num" id="cd-h">00</span><div class="cd-label">Hours</div></div>
+      <div class="cd-box glass"><span class="cd-num" id="cd-m">00</span><div class="cd-label">Minutes</div></div>
+      <div class="cd-box glass"><span class="cd-num" id="cd-s">00</span><div class="cd-label">Seconds</div></div>
+    </div>
+    <div class="icon-strip reveal">🌹 💖 🎊 🌟 🎉 💫 🌸</div>
+    <h2 class="final-love reveal">I Love You Forever 💖</h2>
+    <p class="final-sub reveal">Not just today. Not just on your birthday.<br/>Every day, in every moment, in every universe where we exist — <strong>I choose you. I love you.</strong></p>
+    <button class="celebrate-btn reveal" onclick="launchCelebration()">🎉 &nbsp;Celebrate Together!</button>
+  </div>
+</section>
+
+<audio id="bg-music" loop preload="none"></audio>
+<script src="js/app.js"></script>
+</body>
+</html>
