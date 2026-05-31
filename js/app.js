@@ -26,11 +26,29 @@ const MUSIC_SRC = "videos/song.mp3"; // ← e.g. 'videos/song.mp3'
    WhatsApp Image 2026-05-31... → photo1.jpg, photo2.jpg etc.
    ═══════════════════════════════════════════════════════ */
 const FIXED_PHOTOS = [
-  { src: 'images/photo1.jpg', caption: 'Our first day 💕' },
-  { src: 'images/photo2.jpg', caption: 'That magical evening 🌙' },
-  { src: 'images/photo3.jpg', caption: 'You laughing ✨' },
-  { src: 'images/photo4.jpg', caption: 'Our adventure 🗺️' },
-  { src: 'images/photo5.jpg', caption: 'You in the sunshine 🌸' },
+  { src: 'images/photo(1).jpg', caption: 'Our first day 💕' },
+  { src: 'images/photo(2).jpg', caption: 'That magical evening 🌙' },
+  { src: 'images/photo(3).jpg', caption: 'You laughing ✨' },
+  { src: 'images/photo(4).jpg', caption: 'Our adventure 🗺️' },
+  { src: 'images/photo(5).jpg', caption: 'You in the sunshine 🌸' },
+  { src: 'images/photo(6).jpg', caption: 'You in the sunshine 🌸' },
+  { src: 'images/photo(7).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(8).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(9).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(10).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(11).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(12).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(13).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(14).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(15).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(16).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(17).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(18).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(19).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(20).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(21).jpg', caption: 'You in the sunshine 🌸' },
+   { src: 'images/photo(22).jpg', caption: 'You in the sunshine 🌸' },
+   
   // ← Add as many as you want! Copy any line above and change the filename.
 ];
 
