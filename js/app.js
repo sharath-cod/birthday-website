@@ -4,22 +4,63 @@
    ============================================================ */
 
 /* ═══════════════════════════════════════════════════════
-   ★ CONFIG — Edit these
+   ★ STEP 1 — Basic Info
    ═══════════════════════════════════════════════════════ */
-const HER_NAME  = "Sinchana(CUBBY)😊";
-const BIRTHDAY  = new Date(2026, 5, 1); // new Date(YEAR, MONTH-1, DAY)
-const MUSIC_SRC = "videos/Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3";                    // e.g. 'videos/song.mp3'
+const HER_NAME  = "Sinchana UB "; // ← her name
+
+// Birthday: new Date(YEAR, MONTH-1, DAY)
+// Jan=0 Feb=1 Mar=2 Apr=3 May=4 Jun=5 Jul=6 Aug=7 Sep=8 Oct=9 Nov=10 Dec=11
+const BIRTHDAY  = new Date(2025, 5, 15); // ← CHANGE THIS
+
+// Music: put .mp3 in videos/ folder, write exact filename below
+const MUSIC_SRC = "videos/song.mp3"; // ← e.g. 'videos/song.mp3'
+
+/* ═══════════════════════════════════════════════════════
+   ★ STEP 2 — YOUR PHOTOS (permanent, load every time)
+   ───────────────────────────────────────────────────────
+   1. Put your photo files inside the  images/  folder
+   2. Add each filename below like this:
+      { src: 'images/photo1.jpg', caption: 'Caption 💕' },
+
+   Rename your WhatsApp photos to simple names first:
+   WhatsApp Image 2026-05-31... → photo1.jpg, photo2.jpg etc.
+   ═══════════════════════════════════════════════════════ */
+const FIXED_PHOTOS = [
+  { src: 'images/photo1.jpg', caption: 'Our first day 💕' },
+  { src: 'images/photo2.jpg', caption: 'That magical evening 🌙' },
+  { src: 'images/photo3.jpg', caption: 'You laughing ✨' },
+  { src: 'images/photo4.jpg', caption: 'Our adventure 🗺️' },
+  { src: 'images/photo5.jpg', caption: 'You in the sunshine 🌸' },
+  // ← Add as many as you want! Copy any line above and change the filename.
+];
+
+/* ═══════════════════════════════════════════════════════
+   ★ STEP 3 — YOUR VIDEOS (permanent, load every time)
+   ───────────────────────────────────────────────────────
+   1. Put your video files inside the  videos/  folder
+   2. Add each filename below like this:
+      { src: 'videos/video1.mp4', name: 'Our Holiday 🌊' },
+
+   Rename WhatsApp videos to simple names first:
+   WhatsApp Video 2026-05-31... → video1.mp4, video2.mp4 etc.
+   ═══════════════════════════════════════════════════════ */
+const FIXED_VIDEOS = [
+  // { src: 'videos/video1.mp4', name: 'The day we met 💕' },
+  // { src: 'videos/video2.mp4', name: 'Our holiday 🌊' },
+  // { src: 'videos/video3.mp4', name: 'You laughing 😂' },
+  // ← Add as many as you want! Copy any line above and change the filename.
+];
 
 /* ═══════════════════════════════════════════════════════
    ★ TIMELINE — Edit your 4 memories
    ═══════════════════════════════════════════════════════ */
 const TIMELINE = [
   { date:'The Beginning', icon:'👋', title:'The Day We Met',
-    desc:'The moment I first saw you in lab, got somthing spl in you but im really scred about you that time. I didn\'t know it then, but I was meeting the love of my life.' },
+    desc:'The moment I first saw you, something shifted in my universe. I didn\'t know it then, but I was meeting the love of my life.' },
   { date:'The Spark', icon:'💘', title:'When I Fell For You',
-    desc:'Im not able to remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
-  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey to orion mall😁',
-    desc:'Every laugh, every hugs, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
+    desc:'I remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
+  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey',
+    desc:'Every laugh, every late night, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
   { date:'Today & Forever', icon:'🌟', title:'This Birthday & Beyond',
     desc:'Here we are, celebrating you on your most special day. And I promise — so many more beautiful chapters await us.' },
 ];
@@ -217,14 +258,17 @@ function buildGalleryZone() {
   if (!wrap) return;
 
   wrap.innerHTML = `
-    <!-- DROP ZONE -->
-    <div class="drop-zone" id="photo-drop" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handlePhotoDrop(event)">
-      <input type="file" id="photo-input" accept="image/*" multiple style="display:none" onchange="handlePhotoFiles(this.files)"/>
+    <!-- DROP ZONE — click anywhere to open file picker -->
+    <input type="file" id="photo-input" accept="image/*" multiple style="display:none" onchange="handlePhotoFiles(this.files)"/>
+    <div class="drop-zone" id="photo-drop"
+      onclick="document.getElementById('photo-input').click()"
+      ondragover="event.preventDefault();this.classList.add('drag-over')"
+      ondragleave="this.classList.remove('drag-over')"
+      ondrop="handlePhotoDrop(event)">
       <div class="drop-icon">📸</div>
       <div class="drop-title">Drop your photos here</div>
-      <div class="drop-sub">Drag & drop any number of photos · or click to browse</div>
-      <button class="drop-btn" onclick="document.getElementById('photo-input').click()">Choose Photos</button>
-      <div class="drop-hint">JPG · PNG · WEBP · All formats welcome 💕</div>
+      <div class="drop-sub">Drag & drop anywhere · or tap anywhere here to browse</div>
+      <div class="drop-hint">JPG · PNG · WEBP · Any format · Any number 💕</div>
     </div>
 
     <!-- FLOATING FRAMES CANVAS -->
@@ -237,10 +281,23 @@ function buildGalleryZone() {
     </div>
   `;
 
-  // Render any saved photos
-  savedPhotos.forEach((src, i) => addPhotoFrame(src, i));
+  // ── Load FIXED_PHOTOS first (permanent, from images/ folder) ──
+  FIXED_PHOTOS.forEach((photo, i) => {
+    addPhotoFrame(photo.src, i, photo.caption);
+  });
+
+  // ── Then load browser-uploaded photos ──
+  savedPhotos.forEach((src, i) => {
+    addPhotoFrame(src, FIXED_PHOTOS.length + i);
+  });
   if (savedPhotos.length > 0) {
     document.getElementById('gallery-actions').style.display = 'block';
+  }
+
+  // Hide drop zone if FIXED_PHOTOS are already set
+  if (FIXED_PHOTOS.length > 0) {
+    const dz = document.getElementById('photo-drop');
+    if (dz) dz.style.display = 'none';
   }
 }
 
@@ -267,7 +324,7 @@ function processPhotoFiles(files) {
   });
 }
 
-function addPhotoFrame(src, index) {
+function addPhotoFrame(src, index, caption) {
   const stage = document.getElementById('frames-stage');
   if (!stage) return;
 
@@ -292,7 +349,7 @@ function addPhotoFrame(src, index) {
       <div class="frame-inner">
         <img src="${src}" alt="Memory ${index+1}" onclick="openLightboxImg('${src}','Memory ${index+1}')"/>
       </div>
-      <div class="frame-caption">Memory ${index+1} 💕</div>
+      <div class="frame-caption">${caption || 'Memory ' + (index+1) + ' 💕'}</div>
     </div>
     <button class="frame-delete" onclick="deletePhoto(${index})" title="Remove">✕</button>
   `;
@@ -316,7 +373,8 @@ function clearPhotos() {
 function rebuildFrames() {
   const stage = document.getElementById('frames-stage');
   if (stage) stage.innerHTML = '';
-  savedPhotos.forEach((src, i) => addPhotoFrame(src, i));
+  FIXED_PHOTOS.forEach((photo, i) => addPhotoFrame(photo.src, i, photo.caption));
+  savedPhotos.forEach((src, i) => addPhotoFrame(src, FIXED_PHOTOS.length + i));
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -327,14 +385,17 @@ function buildVideoZone() {
   if (!wrap) return;
 
   wrap.innerHTML = `
-    <!-- VIDEO DROP ZONE -->
-    <div class="drop-zone" id="video-drop" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleVideoDrop(event)">
-      <input type="file" id="video-input" accept="video/*" multiple style="display:none" onchange="handleVideoFiles(this.files)"/>
+    <!-- VIDEO DROP ZONE — click anywhere to open file picker -->
+    <input type="file" id="video-input" accept="video/*" multiple style="display:none" onchange="handleVideoFiles(this.files)"/>
+    <div class="drop-zone" id="video-drop"
+      onclick="document.getElementById('video-input').click()"
+      ondragover="event.preventDefault();this.classList.add('drag-over')"
+      ondragleave="this.classList.remove('drag-over')"
+      ondrop="handleVideoDrop(event)">
       <div class="drop-icon">🎬</div>
       <div class="drop-title">Drop your videos here</div>
-      <div class="drop-sub">Drag & drop MP4, MOV, or any video · or click to browse</div>
-      <button class="drop-btn" onclick="document.getElementById('video-input').click()">Choose Videos</button>
-      <div class="drop-hint">MP4 · MOV · AVI · All formats welcome 🎥</div>
+      <div class="drop-sub">Drag & drop anywhere · or tap anywhere here to browse</div>
+      <div class="drop-hint">MP4 · MOV · AVI · Any format · Any number 🎥</div>
     </div>
 
     <!-- VIDEO CARDS GRID -->
@@ -347,8 +408,18 @@ function buildVideoZone() {
     </div>
   `;
 
-  savedVideos.forEach((v, i) => addVideoCard(v.src, v.name, i));
+  // ── Load FIXED_VIDEOS first (permanent) ──
+  FIXED_VIDEOS.forEach((v, i) => addVideoCard(v.src, v.name, i));
+
+  // ── Then browser-uploaded videos ──
+  savedVideos.forEach((v, i) => addVideoCard(v.src, v.name, FIXED_VIDEOS.length + i));
   if (savedVideos.length > 0) document.getElementById('video-actions').style.display = 'block';
+
+  // Hide drop zone if FIXED_VIDEOS are already set
+  if (FIXED_VIDEOS.length > 0) {
+    const dz = document.getElementById('video-drop');
+    if (dz) dz.style.display = 'none';
+  }
 }
 
 function handleVideoDrop(e) {
@@ -479,18 +550,46 @@ function startCountdown() {
 
 /* ── MUSIC ─────────────────────────────────────────────── */
 function initMusic(){
-  const audio=document.getElementById('bg-music');if(!audio)return;
-  if(MUSIC_SRC) audio.src=MUSIC_SRC;
+  const audio=document.getElementById('bg-music');
+  if(!audio||!MUSIC_SRC)return;
+  audio.src=MUSIC_SRC;
+  audio.volume=0.5;
+  // Try autoplay on first user interaction
+  const tryPlay=()=>{
+    if(!musicPlaying){
+      audio.play().then(()=>{
+        musicPlaying=true;
+        const btn=document.getElementById('music-btn');
+        if(btn){btn.textContent='♫  Playing';btn.classList.add('playing');}
+      }).catch(()=>{});
+    }
+    document.removeEventListener('click',tryPlay);
+    document.removeEventListener('touchstart',tryPlay);
+  };
+  document.addEventListener('click',tryPlay,{once:true});
+  document.addEventListener('touchstart',tryPlay,{once:true});
 }
 let musicPlaying=false;
 function toggleMusic(){
   const audio=document.getElementById('bg-music');
   const btn=document.getElementById('music-btn');
   if(!audio)return;
-  if(!MUSIC_SRC){alert('🎵 Add music:\n\n1. Put .mp3 in videos/ folder\n2. Open js/app.js\n3. Set MUSIC_SRC = "videos/song.mp3"');return;}
+  if(!MUSIC_SRC){
+    alert('🎵 Music not set!\n\nOpen js/app.js and change:\nMUSIC_SRC = "videos/your-song.mp3"\n\nMake sure the .mp3 file is in your videos/ folder!');
+    return;
+  }
   musicPlaying=!musicPlaying;
-  if(musicPlaying){audio.play().catch(()=>{});btn.textContent='♫  Playing';btn.classList.add('playing');}
-  else{audio.pause();btn.textContent='♪  Music';btn.classList.remove('playing');}
+  if(musicPlaying){
+    audio.play().then(()=>{
+      btn.textContent='♫  Playing';btn.classList.add('playing');
+    }).catch(()=>{
+      musicPlaying=false;
+      alert('Could not play music. Make sure the file name in MUSIC_SRC exactly matches your .mp3 file name!');
+    });
+  } else {
+    audio.pause();
+    btn.textContent='♪  Music';btn.classList.remove('playing');
+  }
 }
 
 /* ── CELEBRATION ───────────────────────────────────────── */
