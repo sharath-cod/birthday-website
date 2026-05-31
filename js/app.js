@@ -8,18 +8,18 @@
    ═══════════════════════════════════════════════════════ */
 const HER_NAME  = "Sinchana(CUBBY)😊";
 const BIRTHDAY  = new Date(2026, 6, 1); // new Date(YEAR, MONTH-1, DAY)
-const MUSIC_SRC = "Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3";                    // e.g. 'videos/song.mp3'
+const MUSIC_SRC = ""C:\Users\Sharath\Downloads\Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3"";                    // e.g. 'videos/song.mp3'
 
 /* ═══════════════════════════════════════════════════════
    ★ TIMELINE — Edit your 4 memories
    ═══════════════════════════════════════════════════════ */
 const TIMELINE = [
   { date:'The Beginning', icon:'👋', title:'The Day We Met',
-    desc:'The moment I first saw you, something shifted in my universe. I didn\'t know it then, but I was meeting the love of my life.' },
+    desc:'The moment I first saw you in lab, got somthing spl in you but im really scred about you that time. I didn\'t know it then, but I was meeting the love of my life.' },
   { date:'The Spark', icon:'💘', title:'When I Fell For You',
-    desc:'I remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
-  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey',
-    desc:'Every laugh, every late night, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
+    desc:'Im not able to remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
+  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey to orion mall😁',
+    desc:'Every laugh, every hugs, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
   { date:'Today & Forever', icon:'🌟', title:'This Birthday & Beyond',
     desc:'Here we are, celebrating you on your most special day. And I promise — so many more beautiful chapters await us.' },
 ];
