@@ -10,7 +10,7 @@ const HER_NAME  = "Sinchana UB "; // ← her name
 
 // Birthday: new Date(YEAR, MONTH-1, DAY)
 // Jan=0 Feb=1 Mar=2 Apr=3 May=4 Jun=5 Jul=6 Aug=7 Sep=8 Oct=9 Nov=10 Dec=11
-const BIRTHDAY  = new Date(2025, 5, 15); // ← CHANGE THIS
+const BIRTHDAY  = new Date(2026, 5, 1); // ← CHANGE THIS
 
 // Music: put .mp3 in videos/ folder, write exact filename below
 const MUSIC_SRC = "videos/song.mp3"; // ← e.g. 'videos/song.mp3'
