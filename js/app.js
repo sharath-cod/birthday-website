@@ -7,7 +7,7 @@
    ★ CONFIG — Edit these
    ═══════════════════════════════════════════════════════ */
 const HER_NAME  = "Sinchana(CUBBY)😊";
-const BIRTHDAY  = new Date(2026, 6, 1); // new Date(YEAR, MONTH-1, DAY)
+const BIRTHDAY  = new Date(2026, 5, 1); // new Date(YEAR, MONTH-1, DAY)
 const MUSIC_SRC = ""C:\Users\Sharath\Downloads\Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3"";                    // e.g. 'videos/song.mp3'
 
 /* ═══════════════════════════════════════════════════════
