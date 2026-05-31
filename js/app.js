@@ -35,7 +35,7 @@ const FIXED_PHOTOS = [
     { src: 'images/photo (7).jpeg', caption: 'sunshine 🌸' },
     { src: 'images/photo (8).jpeg', caption: 'sunshine 🌸' },
     { src: 'images/photo (9).jpeg', caption: 'sunshine 🌸' },
-    { src: 'images/photo (10).jepg', caption: 'sunshine 🌸' },
+    { src: 'images/photo (10).jpeg', caption: 'sunshine 🌸' },
     { src: 'images/photo (11).jpeg', caption: 'sunshine 🌸' },
     { src: 'images/photo (12).jpeg', caption: 'sunshine 🌸' },
     { src: 'images/photo (13).jpeg', caption: 'sunshine 🌸' },
