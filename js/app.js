@@ -6,9 +6,9 @@
 /* ═══════════════════════════════════════════════════════
    ★ CONFIG — Edit these
    ═══════════════════════════════════════════════════════ */
-const HER_NAME  = "My Love";
-const BIRTHDAY  = new Date(2025, 5, 15); // new Date(YEAR, MONTH-1, DAY)
-const MUSIC_SRC = "C:\Users\Sharath\Downloads\Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3";                    // e.g. 'videos/song.mp3'
+const HER_NAME  = "Sinchana(CUBBY)😊";
+const BIRTHDAY  = new Date(2026, 6, 1); // new Date(YEAR, MONTH-1, DAY)
+const MUSIC_SRC = "Dil Tu Jaan Tu - Gurnazar (DJJOhAL.Com).mp3";                    // e.g. 'videos/song.mp3'
 
 /* ═══════════════════════════════════════════════════════
    ★ TIMELINE — Edit your 4 memories
