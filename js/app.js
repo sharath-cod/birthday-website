@@ -6,24 +6,17 @@
 /* ═══════════════════════════════════════════════════════
    ★ STEP 1 — Basic Info
    ═══════════════════════════════════════════════════════ */
-const HER_NAME  = "Sinchana UB "; // ← her name
+const HER_NAME  = "Sinchana UB 😊"; // ← her name
 
 // Birthday: new Date(YEAR, MONTH-1, DAY)
 // Jan=0 Feb=1 Mar=2 Apr=3 May=4 Jun=5 Jul=6 Aug=7 Sep=8 Oct=9 Nov=10 Dec=11
-const BIRTHDAY  = new Date(2026, 5, 1); // ← CHANGE THIS
+const BIRTHDAY  = new Date(2026, 5, 1); // ← June 1, 2026
 
 // Music: put .mp3 in videos/ folder, write exact filename below
-const MUSIC_SRC = "videos/song.mp3"; // ← e.g. 'videos/song.mp3'
+const MUSIC_SRC = "videos/song.mp3";
 
 /* ═══════════════════════════════════════════════════════
    ★ STEP 2 — YOUR PHOTOS (permanent, load every time)
-   ───────────────────────────────────────────────────────
-   1. Put your photo files inside the  images/  folder
-   2. Add each filename below like this:
-      { src: 'images/photo1.jpg', caption: 'Caption 💕' },
-
-   Rename your WhatsApp photos to simple names first:
-   WhatsApp Image 2026-05-31... → photo1.jpg, photo2.jpg etc.
    ═══════════════════════════════════════════════════════ */
 const FIXED_PHOTOS = [
     { src: 'images/photo (1).jpeg', caption: 'Our first day 💕' },
@@ -48,38 +41,27 @@ const FIXED_PHOTOS = [
     { src: 'images/photo (20).jpeg', caption: 'my fav one 😍' },
     { src: 'images/photo (21).jpeg', caption: 'baby 🐰' },
     { src: 'images/photo (22).jpeg', caption: 'sunshine 🌸' },
-   
-  // ← Add as many as you want! Copy any line above and change the filename.
 ];
 
 /* ═══════════════════════════════════════════════════════
    ★ STEP 3 — YOUR VIDEOS (permanent, load every time)
-   ───────────────────────────────────────────────────────
-   1. Put your video files inside the  videos/  folder
-   2. Add each filename below like this:
-      { src: 'videos/video1.mp4', name: 'Our Holiday 🌊' },
-
-   Rename WhatsApp videos to simple names first:
-   WhatsApp Video 2026-05-31... → video1.mp4, video2.mp4 etc.
    ═══════════════════════════════════════════════════════ */
 const FIXED_VIDEOS = [
-    { src: 'videos/video (1).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (2).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (3).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (4).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (5).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (6).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (7).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (8).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (9).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (10).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (11).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (12).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (13).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (14).mp4', name: 'Memory 💕' },
-    { src: 'videos/video (15).mp4', name: 'Memory 💕' },
- 
-  // ← Add as many as you want! Copy any line above and change the filename.
+  { src: 'videos/video (1).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (2).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (3).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (4).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (5).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (6).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (7).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (8).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (9).mp4',  name: 'Memory 💕' },
+  { src: 'videos/video (10).mp4', name: 'Memory 💕' },
+  { src: 'videos/video (11).mp4', name: 'Memory 💕' },
+  { src: 'videos/video (12).mp4', name: 'Memory 💕' },
+  { src: 'videos/video (13).mp4', name: 'Memory 💕' },
+  { src: 'videos/video (14).mp4', name: 'Memory 💕' },
+  { src: 'videos/video (15).mp4', name: 'Memory 💕' },
 ];
 
 /* ═══════════════════════════════════════════════════════
@@ -87,11 +69,11 @@ const FIXED_VIDEOS = [
    ═══════════════════════════════════════════════════════ */
 const TIMELINE = [
   { date:'The Beginning', icon:'👋', title:'The Day We Met',
-    desc:'The moment I first saw you, im reallyscared something shifted in my universe. I didn\'t know it then, but I was meeting the love of my life.' },
+    desc:'The moment I first saw you in lab, got something special in you but I was really scared about you that time. I didn\'t know it then, but I was meeting the love of my life.' },
   { date:'The Spark', icon:'💘', title:'When I Fell For You',
-    desc:'Im able to remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
-  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey',
-    desc:'Every laugh, every sittings in orion mall, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
+    desc:'I\'m not able to remember the exact moment I realized I was completely, hopelessly, beautifully in love with you. And I\'ve been falling ever since.' },
+  { date:'Adventures', icon:'🗺️', title:'Our Beautiful Journey to Orion Mall 😍',
+    desc:'Every laugh, every hug, every inside joke — each moment with you is a treasure I\'ll carry in my heart forever.' },
   { date:'Today & Forever', icon:'🌟', title:'This Birthday & Beyond',
     desc:'Here we are, celebrating you on your most special day. And I promise — so many more beautiful chapters await us.' },
 ];
@@ -109,11 +91,12 @@ const LETTER_PARAGRAPHS = [
 
 /* ════════════════════════════════════════════════════════
    ↑ THAT'S ALL YOU NEED TO EDIT ↑
-   Everything below powers the website automatically.
    ════════════════════════════════════════════════════════ */
 
-// ── PHOTO STORAGE (persists in localStorage so photos survive refresh) ──
-// photos are stored as base64 data URLs
+// ── ALL VIDEOS combined (fixed + browser uploads) for playback ──
+// This is the key fix — one master list used by playVideoInline
+let allVideos = [];
+
 let savedPhotos = [];
 let savedVideos = [];
 
@@ -132,7 +115,6 @@ function saveVideos() {
   try { localStorage.setItem('bday_videos', JSON.stringify(savedVideos)); } catch(e) {}
 }
 
-// ── GRADIENTS for frames ──
 const FRAME_GRADIENTS = [
   'linear-gradient(135deg,#ffb6c1,#e8829a)',
   'linear-gradient(135deg,#c990b8,#6b4aa0)',
@@ -150,8 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   buildBackground();
   buildTimeline();
-  buildGalleryZone();   // new single upload zone
-  buildVideoZone();     // new single upload zone
+  buildGalleryZone();
+  buildVideoZone();
   buildLetter();
   startCountdown();
   initScrollReveal();
@@ -282,14 +264,13 @@ function buildPetals(){
 }
 
 /* ══════════════════════════════════════════════════════════
-   ★ GALLERY — Single Drop Zone + Floating Frames
+   ★ GALLERY
    ══════════════════════════════════════════════════════════ */
 function buildGalleryZone() {
   const wrap = document.getElementById('gallery-zone');
   if (!wrap) return;
 
   wrap.innerHTML = `
-    <!-- DROP ZONE — click anywhere to open file picker -->
     <input type="file" id="photo-input" accept="image/*" multiple style="display:none" onchange="handlePhotoFiles(this.files)"/>
     <div class="drop-zone" id="photo-drop"
       onclick="document.getElementById('photo-input').click()"
@@ -298,34 +279,23 @@ function buildGalleryZone() {
       ondrop="handlePhotoDrop(event)">
       <div class="drop-icon">📸</div>
       <div class="drop-title">Drop your photos here</div>
-      <div class="drop-sub">Drag & drop anywhere · or tap anywhere here to browse</div>
+      <div class="drop-sub">Drag & drop anywhere · or tap to browse</div>
       <div class="drop-hint">JPG · PNG · WEBP · Any format · Any number 💕</div>
     </div>
-
-    <!-- FLOATING FRAMES CANVAS -->
     <div class="frames-stage" id="frames-stage"></div>
-
-    <!-- CLEAR BUTTON (shown when photos exist) -->
     <div id="gallery-actions" style="display:none;text-align:center;margin-top:24px">
-      <button class="clear-btn" onclick="clearPhotos()">🗑️ Clear All Photos</button>
-      <div style="color:rgba(255,182,193,.5);font-size:.78rem;margin-top:8px">Photos are saved in your browser automatically</div>
+      <button class="clear-btn" onclick="clearPhotos()">🗑️ Clear Uploaded Photos</button>
     </div>
   `;
 
-  // ── Load FIXED_PHOTOS first (permanent, from images/ folder) ──
-  FIXED_PHOTOS.forEach((photo, i) => {
-    addPhotoFrame(photo.src, i, photo.caption);
-  });
+  // Load permanent photos from FIXED_PHOTOS
+  FIXED_PHOTOS.forEach((photo, i) => addPhotoFrame(photo.src, i, photo.caption));
 
-  // ── Then load browser-uploaded photos ──
-  savedPhotos.forEach((src, i) => {
-    addPhotoFrame(src, FIXED_PHOTOS.length + i);
-  });
-  if (savedPhotos.length > 0) {
-    document.getElementById('gallery-actions').style.display = 'block';
-  }
+  // Load browser-uploaded photos
+  savedPhotos.forEach((src, i) => addPhotoFrame(src, FIXED_PHOTOS.length + i));
+  if (savedPhotos.length > 0) document.getElementById('gallery-actions').style.display = 'block';
 
-  // Hide drop zone if FIXED_PHOTOS are already set
+  // Hide drop zone if FIXED_PHOTOS exist
   if (FIXED_PHOTOS.length > 0) {
     const dz = document.getElementById('photo-drop');
     if (dz) dz.style.display = 'none';
@@ -335,12 +305,9 @@ function buildGalleryZone() {
 function handlePhotoDrop(e) {
   e.preventDefault();
   document.getElementById('photo-drop').classList.remove('drag-over');
-  const files = [...e.dataTransfer.files].filter(f => f.type.startsWith('image/'));
-  processPhotoFiles(files);
+  processPhotoFiles([...e.dataTransfer.files].filter(f=>f.type.startsWith('image/')));
 }
-function handlePhotoFiles(fileList) {
-  processPhotoFiles([...fileList]);
-}
+function handlePhotoFiles(fileList) { processPhotoFiles([...fileList]); }
 function processPhotoFiles(files) {
   files.forEach(file => {
     const reader = new FileReader();
@@ -348,75 +315,70 @@ function processPhotoFiles(files) {
       const src = e.target.result;
       savedPhotos.push(src);
       savePhotos();
-      addPhotoFrame(src, savedPhotos.length - 1);
+      addPhotoFrame(src, FIXED_PHOTOS.length + savedPhotos.length - 1);
       document.getElementById('gallery-actions').style.display = 'block';
     };
     reader.readAsDataURL(file);
   });
 }
-
 function addPhotoFrame(src, index, caption) {
   const stage = document.getElementById('frames-stage');
   if (!stage) return;
-
-  // Random floating position & rotation
   const rotations = [-6,-4,-3,-2,-1,0,1,2,3,4,6];
-  const rot    = rotations[Math.floor(Math.random() * rotations.length)];
-  const grad   = FRAME_GRADIENTS[index % FRAME_GRADIENTS.length];
-  const delay  = (index * 0.12).toFixed(2);
-  const size   = 200 + Math.floor(Math.random() * 80); // 200–280px
-
+  const rot   = rotations[Math.floor(Math.random()*rotations.length)];
+  const grad  = FRAME_GRADIENTS[index % FRAME_GRADIENTS.length];
+  const delay = (index * 0.12).toFixed(2);
+  const size  = 200 + Math.floor(Math.random() * 80);
   const frame = document.createElement('div');
   frame.className = 'photo-frame';
-  frame.dataset.index = index;
-  frame.style.cssText = `
-    --rot:${rot}deg;
-    --size:${size}px;
-    --grad:${grad};
-    animation-delay:${delay}s;
-  `;
+  frame.style.cssText = `--rot:${rot}deg;--size:${size}px;--grad:${grad};animation-delay:${delay}s;`;
+  // Use data attribute for src to avoid quote escaping issues in onclick
   frame.innerHTML = `
     <div class="frame-border" style="background:${grad}">
       <div class="frame-inner">
-        <img src="${src}" alt="Memory ${index+1}" onclick="openLightboxImg('${src}','Memory ${index+1}')"/>
+        <img src="${src}" alt="${caption||'Memory'}"/>
       </div>
-      <div class="frame-caption">${caption || 'Memory ' + (index+1) + ' 💕'}</div>
+      <div class="frame-caption">${caption||'Memory '+(index+1)+' 💕'}</div>
     </div>
     <button class="frame-delete" onclick="deletePhoto(${index})" title="Remove">✕</button>
   `;
-
+  frame.querySelector('img').addEventListener('click', () => openLightboxImg(src, caption||'Memory '+(index+1)));
   stage.appendChild(frame);
 }
-
 function deletePhoto(index) {
-  savedPhotos.splice(index, 1);
-  savePhotos();
-  rebuildFrames();
-  if (savedPhotos.length === 0) document.getElementById('gallery-actions').style.display = 'none';
+  const fixedLen = FIXED_PHOTOS.length;
+  if (index < fixedLen) return; // can't delete fixed photos
+  savedPhotos.splice(index - fixedLen, 1);
+  savePhotos(); rebuildFrames();
+  if (savedPhotos.length===0) document.getElementById('gallery-actions').style.display='none';
 }
 function clearPhotos() {
-  if (!confirm('Remove all photos?')) return;
-  savedPhotos = [];
-  savePhotos();
-  rebuildFrames();
-  document.getElementById('gallery-actions').style.display = 'none';
+  if (!confirm('Remove uploaded photos?')) return;
+  savedPhotos=[]; savePhotos(); rebuildFrames();
+  document.getElementById('gallery-actions').style.display='none';
 }
 function rebuildFrames() {
   const stage = document.getElementById('frames-stage');
   if (stage) stage.innerHTML = '';
-  FIXED_PHOTOS.forEach((photo, i) => addPhotoFrame(photo.src, i, photo.caption));
-  savedPhotos.forEach((src, i) => addPhotoFrame(src, FIXED_PHOTOS.length + i));
+  FIXED_PHOTOS.forEach((photo,i) => addPhotoFrame(photo.src, i, photo.caption));
+  savedPhotos.forEach((src,i) => addPhotoFrame(src, FIXED_PHOTOS.length+i));
 }
 
 /* ══════════════════════════════════════════════════════════
-   ★ VIDEO ZONE — Single Drop Zone + Video Cards
+   ★ VIDEO ZONE — THE KEY FIX IS HERE
+   allVideos[] is built once and used by playVideoInline()
    ══════════════════════════════════════════════════════════ */
 function buildVideoZone() {
   const wrap = document.getElementById('video-zone');
   if (!wrap) return;
 
+  // ── Build master video list: fixed first, then uploads ──
+  allVideos = [
+    ...FIXED_VIDEOS.map(v => ({ src: v.src, name: v.name, isFixed: true })),
+    ...savedVideos.map(v => ({ src: v.src, name: v.name, isFixed: false })),
+  ];
+
   wrap.innerHTML = `
-    <!-- VIDEO DROP ZONE — click anywhere to open file picker -->
     <input type="file" id="video-input" accept="video/*" multiple style="display:none" onchange="handleVideoFiles(this.files)"/>
     <div class="drop-zone" id="video-drop"
       onclick="document.getElementById('video-input').click()"
@@ -425,28 +387,21 @@ function buildVideoZone() {
       ondrop="handleVideoDrop(event)">
       <div class="drop-icon">🎬</div>
       <div class="drop-title">Drop your videos here</div>
-      <div class="drop-sub">Drag & drop anywhere · or tap anywhere here to browse</div>
-      <div class="drop-hint">MP4 · MOV · AVI · Any format · Any number 🎥</div>
+      <div class="drop-sub">Drag & drop anywhere · or tap to browse</div>
+      <div class="drop-hint">MP4 · MOV · Any format · Any number 🎥</div>
     </div>
-
-    <!-- VIDEO CARDS GRID -->
     <div class="video-cards-grid" id="video-cards-grid"></div>
-
-    <!-- CLEAR BUTTON -->
     <div id="video-actions" style="display:none;text-align:center;margin-top:24px">
-      <button class="clear-btn" onclick="clearVideos()">🗑️ Clear All Videos</button>
-      <div style="color:rgba(255,182,193,.5);font-size:.78rem;margin-top:8px">Videos are saved in your browser automatically</div>
+      <button class="clear-btn" onclick="clearVideos()">🗑️ Clear Uploaded Videos</button>
     </div>
   `;
 
-  // ── Load FIXED_VIDEOS first (permanent) ──
-  FIXED_VIDEOS.forEach((v, i) => addVideoCard(v.src, v.name, i));
+  // Render all videos using allVideos index
+  allVideos.forEach((v, i) => addVideoCard(v.src, v.name, i, v.isFixed));
 
-  // ── Then browser-uploaded videos ──
-  savedVideos.forEach((v, i) => addVideoCard(v.src, v.name, FIXED_VIDEOS.length + i));
   if (savedVideos.length > 0) document.getElementById('video-actions').style.display = 'block';
 
-  // Hide drop zone if FIXED_VIDEOS are already set
+  // Hide drop zone if fixed videos exist
   if (FIXED_VIDEOS.length > 0) {
     const dz = document.getElementById('video-drop');
     if (dz) dz.style.display = 'none';
@@ -456,84 +411,91 @@ function buildVideoZone() {
 function handleVideoDrop(e) {
   e.preventDefault();
   document.getElementById('video-drop').classList.remove('drag-over');
-  const files = [...e.dataTransfer.files].filter(f => f.type.startsWith('video/'));
-  processVideoFiles(files);
+  processVideoFiles([...e.dataTransfer.files].filter(f=>f.type.startsWith('video/')));
 }
-function handleVideoFiles(fileList) {
-  processVideoFiles([...fileList]);
-}
+function handleVideoFiles(fileList) { processVideoFiles([...fileList]); }
 function processVideoFiles(files) {
   files.forEach(file => {
     const reader = new FileReader();
     reader.onload = e => {
-      const entry = { src: e.target.result, name: file.name.replace(/\.[^.]+$/, '') };
+      const entry = { src: e.target.result, name: file.name.replace(/\.[^.]+$/,'') };
       savedVideos.push(entry);
       saveVideos();
-      addVideoCard(entry.src, entry.name, savedVideos.length - 1);
+      // Rebuild allVideos and re-render
+      rebuildVideoCards();
       document.getElementById('video-actions').style.display = 'block';
     };
     reader.readAsDataURL(file);
   });
 }
 
-function addVideoCard(src, name, index) {
+function addVideoCard(src, name, index, isFixed) {
   const grid = document.getElementById('video-cards-grid');
   if (!grid) return;
   const grad = FRAME_GRADIENTS[index % FRAME_GRADIENTS.length];
-
   const card = document.createElement('div');
   card.className = 'vcard reveal';
-  card.dataset.index = index;
   card.innerHTML = `
-    <div class="vcard-thumb" style="background:${grad}">
-      <video src="${src}" preload="metadata" muted style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:16px 16px 0 0"></video>
+    <div class="vcard-thumb" style="background:${grad}" onclick="playVideoInline(${index})">
+      <video src="${src}" preload="metadata" muted
+        style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:16px 16px 0 0"></video>
       <div class="vcard-overlay">
         <div class="vcard-ripple"></div>
-        <div class="vcard-play" onclick="playVideoInline(${index})">▶</div>
+        <div class="vcard-play">▶</div>
       </div>
     </div>
     <div class="vcard-info">
       <div class="vcard-title">${name} 🎬</div>
-      <button class="vcard-delete" onclick="deleteVideo(${index})">🗑️ Remove</button>
+      ${!isFixed ? `<button class="vcard-delete" onclick="deleteVideo(${index})">🗑️ Remove</button>` : ''}
     </div>
   `;
   grid.appendChild(card);
-  initScrollReveal();
+  setTimeout(initScrollReveal, 100);
 }
 
+// ★ THE FIX — plays from allVideos[] which includes FIXED_VIDEOS
 function playVideoInline(index) {
-  const src = savedVideos[index]?.src;
-  if (!src) return;
+  const video = allVideos[index];
+  if (!video) return;
   document.getElementById('lb-inner').innerHTML = `
-    <video controls autoplay style="max-width:88vw;max-height:82vh;border-radius:14px;display:block;background:#000">
-      <source src="${src}"/>
-    </video>`;
+    <video controls autoplay
+      style="max-width:88vw;max-height:82vh;border-radius:14px;display:block;background:#000">
+      <source src="${video.src}" type="video/mp4"/>
+      Your browser does not support video playback.
+    </video>
+    <p style="text-align:center;margin-top:12px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--pink)">
+      ${video.name}
+    </p>`;
   document.getElementById('lightbox').classList.add('open');
 }
 
 function deleteVideo(index) {
-  savedVideos.splice(index, 1);
-  saveVideos();
-  rebuildVideoCards();
-  if (savedVideos.length === 0) document.getElementById('video-actions').style.display = 'none';
+  const fixedLen = FIXED_VIDEOS.length;
+  if (index < fixedLen) return; // can't delete fixed videos
+  savedVideos.splice(index - fixedLen, 1);
+  saveVideos(); rebuildVideoCards();
+  if (savedVideos.length===0) document.getElementById('video-actions').style.display='none';
 }
 function clearVideos() {
-  if (!confirm('Remove all videos?')) return;
-  savedVideos = [];
-  saveVideos();
-  rebuildVideoCards();
-  document.getElementById('video-actions').style.display = 'none';
+  if (!confirm('Remove uploaded videos?')) return;
+  savedVideos=[]; saveVideos(); rebuildVideoCards();
+  document.getElementById('video-actions').style.display='none';
 }
 function rebuildVideoCards() {
+  allVideos = [
+    ...FIXED_VIDEOS.map(v=>({src:v.src,name:v.name,isFixed:true})),
+    ...savedVideos.map(v=>({src:v.src,name:v.name,isFixed:false})),
+  ];
   const grid = document.getElementById('video-cards-grid');
   if (grid) grid.innerHTML = '';
-  savedVideos.forEach((v, i) => addVideoCard(v.src, v.name, i));
+  allVideos.forEach((v,i) => addVideoCard(v.src, v.name, i, v.isFixed));
 }
 
 /* ── LIGHTBOX ──────────────────────────────────────────── */
 function openLightboxImg(src, label) {
   document.getElementById('lb-inner').innerHTML = `
-    <img src="${src}" alt="${label}" style="max-width:88vw;max-height:84vh;object-fit:contain;border-radius:14px;display:block"/>
+    <img src="${src}" alt="${label}"
+      style="max-width:88vw;max-height:84vh;object-fit:contain;border-radius:14px;display:block"/>
     <p style="text-align:center;margin-top:12px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--pink)">${label}</p>`;
   document.getElementById('lightbox').classList.add('open');
 }
@@ -585,7 +547,6 @@ function initMusic(){
   if(!audio||!MUSIC_SRC)return;
   audio.src=MUSIC_SRC;
   audio.volume=0.5;
-  // Try autoplay on first user interaction
   const tryPlay=()=>{
     if(!musicPlaying){
       audio.play().then(()=>{
@@ -594,32 +555,22 @@ function initMusic(){
         if(btn){btn.textContent='♫  Playing';btn.classList.add('playing');}
       }).catch(()=>{});
     }
-    document.removeEventListener('click',tryPlay);
-    document.removeEventListener('touchstart',tryPlay);
   };
-  document.addEventListener('click',tryPlay,{once:true});
-  document.addEventListener('touchstart',tryPlay,{once:true});
+  document.addEventListener('click', tryPlay, {once:true});
+  document.addEventListener('touchstart', tryPlay, {once:true});
 }
 let musicPlaying=false;
 function toggleMusic(){
   const audio=document.getElementById('bg-music');
   const btn=document.getElementById('music-btn');
   if(!audio)return;
-  if(!MUSIC_SRC){
-    alert('🎵 Music not set!\n\nOpen js/app.js and change:\nMUSIC_SRC = "videos/your-song.mp3"\n\nMake sure the .mp3 file is in your videos/ folder!');
-    return;
-  }
+  if(!MUSIC_SRC){alert('Add MUSIC_SRC in app.js!');return;}
   musicPlaying=!musicPlaying;
   if(musicPlaying){
-    audio.play().then(()=>{
-      btn.textContent='♫  Playing';btn.classList.add('playing');
-    }).catch(()=>{
-      musicPlaying=false;
-      alert('Could not play music. Make sure the file name in MUSIC_SRC exactly matches your .mp3 file name!');
-    });
+    audio.play().then(()=>{btn.textContent='♫  Playing';btn.classList.add('playing');})
+    .catch(()=>{musicPlaying=false;});
   } else {
-    audio.pause();
-    btn.textContent='♪  Music';btn.classList.remove('playing');
+    audio.pause();btn.textContent='♪  Music';btn.classList.remove('playing');
   }
 }
 
