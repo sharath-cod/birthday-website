@@ -1,0 +1,14 @@
+node_modules/
+.env
+dist/
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.log
+
+# Android signing keys: never commit these
+*.jks
+*.keystore
+keystore.properties
+frontend/android/local.properties
+frontend/android/.gradle/
+frontend/android/**/build/
