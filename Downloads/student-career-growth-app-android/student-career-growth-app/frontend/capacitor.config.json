@@ -1,0 +1,17 @@
+{
+  "appId": "com.college.careertracker",
+  "appName": "Career Tracker",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_reminder",
+      "iconColor": "#0F5C4D"
+    }
+  }
+}
