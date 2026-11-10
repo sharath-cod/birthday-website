@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Reel Counter</string>
+    <string name="service_description">Counts reels/shorts you swipe in Instagram and YouTube, shows a floating counter and reminds you when your daily limit is reached. No data leaves your phone unless you enable GitHub backup.</string>
+</resources>
